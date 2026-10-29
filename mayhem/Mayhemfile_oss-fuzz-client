@@ -1,0 +1,9 @@
+project: savantenvs/cppcheck
+target: oss-fuzz-client
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/oss-fuzz-client/testsuite
+cmds:
+  - cmd: /mayhem/oss-fuzz-client
+    libfuzzer: true
+    timeout: 5
